@@ -1,0 +1,57 @@
+{% set slogan_caption = "Встречаем Windows 10" %}
+{% set slogan = [
+	{
+		"class": "vk",
+		"link": "/"
+	},
+	{
+		"class": "fb",
+		"link": "/"
+	}
+]%}
+
+{% set headermenu = [
+	{
+		"title": "Главная",
+		"link": "/"
+	},
+	{
+		"title": "Мероприятие",
+		"link": "/"
+	},
+	{
+		"title": "Конкурс",
+		"link": "/"
+	},
+	{
+		"title": "Регистрация",
+		"link": "/"
+	}
+]%}
+
+<header class="header">
+	<div class="l-container">
+		<a href="/" class="header-logo">
+			<img class="logo-img" src="{{ 'mslogo.png'|img_asset }}" alt="">
+		</a>
+		<div class="slogan">
+			<p>{{slogan_caption}}</p>
+			<div class="img">
+				{% for item in slogan %}
+					<a class="img-{% if item.class %}{{item.class}}{% endif %}" href="{{item.link}}"></a>
+				{% endfor %}
+			</div>
+		</div>
+		<nav class="header-menu">
+			<ul class="header-list">
+				{% for item in headermenu %}
+				<li class="header-list__item">
+					<a class="header-list__link" href="{{item.link}}">
+						{{item.title}}
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</header>

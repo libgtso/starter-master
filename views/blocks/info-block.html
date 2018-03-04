@@ -1,0 +1,16 @@
+{% if content %}
+	<div class="{{content.class}}">
+		<img src="{{content.src}}" alt="">				
+		<div class="block-text">
+			<h2 class="caption-header">
+				{{content.caption}}
+			</h2>
+			{% for item in content.text %}
+				<p class="{% if item.class %}{{item.class}}{% endif %}">{{item.paragraph}}</p>
+			{% endfor %}
+			<a class="block-button {% if content.btn_class %}{{content.btn_class}}{% endif %}" href="{{content.link}}">
+				{{content.button}}
+			</a>
+		</div>
+	</div>
+{% endif %}

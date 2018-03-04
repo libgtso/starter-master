@@ -1,0 +1,245 @@
+{% set sites = [
+
+	{
+		title: "Windows",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	},
+	{
+		title: "Office",
+		link: "/windows",
+		src: "/storage/images/office_logo.png"
+	},
+	{
+		title: "Windows Phone",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	},
+	{
+		title: "Мобильные устройства",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	},
+	{
+		title: "Xbox",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	},
+	{
+		title: "Skype",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	},
+	{
+		title: "MSN Россия",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	},
+	{
+		title: "Bing",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	},
+	{
+		title: "Microsoft Store",
+		link: "/windows",
+		src: "/storage/images/winlogo.png"
+	}
+
+] %}
+
+{% set list = [
+	{
+		title: 'Загружаемые файлы',
+		list: [
+			{
+				title:"Центр загрузок Микрософт",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Шindows",
+				link:"/"
+			},
+			{
+				title:"Обновление до Шindows 8.1",
+				link:"/"
+			},
+			{
+				title:"Бесплатные загрузки",
+				link:"/"
+			},
+			{
+				title:"Internet Explorer",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Office",
+				link:"/"
+			},
+			{
+				title:"Драйверы (звуковой карты, принтера, USB и др.)",
+				link:"/"
+			}
+		]
+	},
+	{
+		title: 'Загружаемые файлы',
+		list: [
+			{
+				title:"Центр загрузок Микрософт",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Шindows",
+				link:"/"
+			},
+			{
+				title:"Обновление до Шindows 8.1",
+				link:"/"
+			},
+			{
+				title:"Бесплатные загрузки",
+				link:"/"
+			},
+			{
+				title:"Internet Explorer",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Office",
+				link:"/"
+			}
+		]
+	},
+	{
+		title: 'Загружаемые файлы',
+		list: [
+			{
+				title:"Центр загрузок Микрософт",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Шindows",
+				link:"/"
+			},
+			{
+				title:"Обновление до Шindows 8.1",
+				link:"/"
+			},
+			{
+				title:"Помощь по продуктам Шindows",
+				link:"/"
+			},
+			{
+				title:"Internet Explorer",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Office",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Office",
+				link:"/"
+			}
+		]
+	},
+	{
+		title: 'Загружаемые файлы',
+		list: [
+			{
+				title:"Центр загрузок Микрософт",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Шindows",
+				link:"/"
+			},
+			{
+				title:"Обновление до Шindows 8.1",
+				link:"/"
+			},
+			{
+				title:"Бесплатные загрузки",
+				link:"/"
+			},
+			{
+				title:"Internet Explorer",
+				link:"/"
+			},
+			{
+				title:"Загрузки для Office",
+				link:"/"
+			}
+		]
+	}
+]%}
+
+{% set nav = [
+	{
+		title: "Контактная информация",
+		link: "/"
+	},
+	{
+		title: "Конфиденциальность",
+		link: "/"
+	},
+	{
+		title: "Условия использования",
+		link: "/"
+	},
+	{
+		title: "Товарные знаки",
+		link: "/"
+	},
+	{
+		title: "Сведения о рекламе",
+		link: "/"
+	}
+]%}
+
+{% set copyright = "&#169 2015 Microsoft" %}
+
+<footer class="l-section footer">
+	<div class="l-container">
+		<div class="sites">
+			<h4 class="header-caption">Сайты по продуктам</h4>
+			<ul class="sites-list">
+				{% for item in sites %}
+				<li class="sites-item">
+					<a href="{{item.link}}">
+						<img src="{{item.src}}" alt=""> 
+						{{item.title}}
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="footer-list-menu">
+			{% for item in list %}
+				<div class="footer-list">
+					<h4 class="header-caption">
+						{{item.title}}
+					</h4>
+					<ul class="">
+						{% for item_list in item.list %}
+							<li class="footer-list_item">
+								<a href="{{item_list.link}}">
+									{{item_list.title}}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}	
+		</div>
+	</div>
+	<div class="footer-nav l-container">
+		<nav>
+			{% for item in nav %}
+				<a href="{{item.link}}">{{item.title}}</a>
+			{% endfor %}
+			<span class="copyright">{{copyright}}</span>
+		</nav>
+	</div>
+</footer>

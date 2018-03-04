@@ -1,0 +1,98 @@
+,
+"link": "/"{% extends layout %}
+{% block content %}
+<section class="l-section block presentation">	
+			{% include "blocks/info-block.html" %}
+		{% set content = 
+			{
+				class:"block-right img"
+			}
+		%}
+			{% include "blocks/info-block.html" %}
+</section>
+<section class="l-section block contest">
+		{% set content = 
+			{
+				class:"block-left img"
+			}
+		%}
+			{% include "blocks/info-block.html" %}	
+		{% set content = 
+			{
+				class:"block-right",
+				caption: "Великие дела ждут!",
+				text: [
+					{
+						paragraph: 'Всероссийский конкурс для продавцов розничных сетей накануне выхода Windows 10 Windows 10 создана для людей с активной жизненной позицией, для тех, кто привык действовать, не останавливаясь на пути к поставленной цели!'
+					}
+				],
+				button: 'Узнать больше',
+				"btn_class": "block-button_pink",
+				"link": "/"
+			}
+		%}
+			{% include "blocks/info-block.html" %}
+</section>
+<section class="l-section block call">
+	{% set content = 
+		{
+			class:"block-left",
+			caption: "Приходи, изучай, веселись и тестируй!",
+			text: [
+				{
+					paragraph: '29 июля Microsoft представит миру Windows 10!'
+				},
+				{
+					paragraph: 'В этот день Microsoft Россия проводит уникальное мероприятие для розничных партнеров, посвященное этому событию. Мы приглашаем тебя первым узнать о преимуществах Windows 10 и отметить выход обновленной операционной системы вместе с нами!'
+				}
+			],
+			button: 'Подробнее',
+			"btn_class": "block-button_nobg",
+			"link": "/"
+		}
+	%}
+		{% include "blocks/info-block.html" %}
+	{% set content = 
+		{
+			class:"block-right",
+			caption: "Участвуй в конкурсе #DogEatThings!",
+			text: [
+				{
+					paragraph: 'Все мы разные и у каждого есть свой талант. Возможно, ты снимаешь видеоклипы или помогаешь бездомным животным? Windows 10 верит, что найти свое истинное предназначение и добиться успеха может каждый! '
+				},
+				{
+					paragraph: 'Если ты занимаешься любимым делом и гордишься своими достижениями, покажи всем, в чем ты талантлив.'
+				}
+			],
+			button: 'Подробнее',
+			"btn_class": "block-button_nobg",
+			"link": "/"
+		}
+	%}
+		{% include "blocks/info-block.html" %}
+</section>
+<section class="l-section block question">
+	{% set content = 
+		{
+			class:"block-left",
+			caption: "Есть вопросы?",
+			text: [
+				{
+					paragraph: 'Команда ExpertZone в России готова ответить на твои вопросы о Windows 10, мероприятии и конкурсе'
+				}
+			],
+			button: 'Написать нам',
+			"btn_class": "block-button_darkblue",
+			"link": "/"
+		}
+	%}
+		{% include "blocks/info-block.html" %}
+	{% set content = 
+		{
+			class:"block-right img",
+			src: 'images/ezlogo.png'|cdn
+		}
+	%}
+		{% include "blocks/info-block.html" %}
+</section>
+{% endblock %}

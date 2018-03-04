@@ -1,0 +1,138 @@
+
+// ===========
+//    core
+// ===========
+
+@import 'core/variables';
+@import 'mixins/mixins';
+@import 'core/reset';
+@import 'core/defaults';
+@import 'core/fonts';
+
+@import 'layout/layout';
+@import 'components/components';
+
+
+
+@import 'helpers/helpers';
+
+.block {
+	display: table;
+	padding: 0;	
+	width: 100%;
+	
+	&-left,
+	&-right {
+		display: table-cell;
+		width: 50%;
+		vertical-align: top;
+		.block-text {
+			width: 500px;
+			.caption-header {
+				margin-bottom: 35px;
+				font-family: 'wf_segoe-ui';
+				font-weight: 100;
+				font-size: 45px;
+				color: @white;
+				margin-top: 70px;
+			}
+			p {
+				width: 445px;
+				color: @white;
+				margin-bottom: 10px;
+				line-height: 21px;
+			}
+			.bold {
+				font-size: 21px;
+				font-weight: 600;
+				margin-top: 20px;
+			}
+			.block-button {
+				text-decoration: none;
+				color: @white;
+				padding: 10px 41px;
+				margin: 25px 0 80px 0;
+				display: inline-block;
+				&_pink {
+					background-color: #b4009e;
+					border:0;
+				}
+				&_blue {
+					background-color: #0078d7;
+					border:0;
+				}
+				&_nobg {
+					border: 1px solid @white;
+				}
+				&_darkblue {
+					background-color: #0b469f;
+				}
+			}
+		}
+		&.img {
+			.block-text {
+				display: none;
+			}
+		}
+	}
+	&-left {
+		background-color: #0078d7;
+		.block-text {
+			float: right;
+		}
+	}
+	&-right {
+		background: rgb(108,61,161);
+		background: -moz-linear-gradient(top, rgb(108,61,161) 0%, rgb(92,45,145) 100%);
+		background: -webkit-linear-gradient(top, rgb(108,61,161) 0%,rgb(92,45,145) 100%);
+		background: linear-gradient(to bottom, rgb(108,61,161) 0%,rgb(92,45,145) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c3da1', endColorstr='#5c2d91',GradientType=0 );
+
+		.block-text {
+			padding-left: 60px;
+			float: left;
+		}
+	}	
+}
+
+.presentation {
+	.block-left {
+		background-color: #063677;
+	}
+	.img {
+		background-image: url("/storage/images/garage_punk_shit.png");
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.contest {
+	.img {
+		background-image: url("/storage/images/graffity.jpg");
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.question {
+	.block-left,
+	.block-right {
+		background: @white;
+		.block-text {
+			h2, p {
+				color: @black;
+			}
+		}
+		img {
+			margin-top: 90px;
+			width: 500px!important;
+			padding: 50px;
+			border: 1px solid #f3f3f3;
+		}
+	}
+	.block-left {
+		img {
+			display: none;
+		}
+	}
+}

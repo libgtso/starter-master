@@ -1,0 +1,57 @@
+.header{
+	padding-top: 20px;
+	background: @white;
+	border-bottom: 5px solid #eeeeee;
+	&-logo {
+		display: block;
+		.logo-img {
+			width: 95px;
+			height: 20px;
+		}
+	}
+	.slogan {
+		position: relative;
+		
+		p {
+			font-size: 29px;
+			font-family: 'wf_segoe-ui';
+			font-weight: 300;
+			color: #505050;
+			display: inline-block;
+		}
+		.img {
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			top: 20%;
+			&-vk,
+			&-fb {
+				width: 24px;
+				height: 24px;
+				display: inline-block;
+				background-image: url('../images/shape.png');
+			}
+			&-vk {
+				background-repeat: no-repeat;
+				background-position: 100% 100%;
+			}
+		}
+	}
+	&-menu {
+		padding: 20px 0;
+	}
+	&-list {
+		&__item {
+			display: inline-block;
+			margin-right: 30px;
+		}
+		&__link {
+			color: @black;
+			text-decoration: none;
+
+			&:hover {
+				color:@links_color;
+			}
+		}
+	}
+}
