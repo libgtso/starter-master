@@ -8,7 +8,7 @@
 	"defaultLayout": "layout.html", 
 	"emptyLayout": "empty_layout.html", 
 	"contentOnly": false,
-	"storage": "https://your-path-to-blob",
+	"storage": ".",
 	"buildIgnore": ["less", "images", "svg", "javascripts/sources"],
 	"assetsHash": true,
 	"showPageList": true,
